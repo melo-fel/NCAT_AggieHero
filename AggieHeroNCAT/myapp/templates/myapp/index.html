@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Hack-A-Thon</title>
+<head>
+<style>
+    body{
+        background-color: rgb(0,70,132);
+    }
+</style>
+</head>
+<body>
+<h1><img src ="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/North_Carolina_A%26T_Aggies_logo.svg/1200px-North_Carolina_A%26T_Aggies_logo.svg.png" height="90">
+    <center>Aggie Help, Because <span style="color:rgb(253,185,39)"> Aggies DO!</span></center></h1>
+<div style ="font-size:3vw"><center>Future Website, For Bettering Aggie Life</center></div>
+<hr size="5"
+style="color:rgb(194,194,194)">
+<h2 style="color:white; position:absolute; top: 600px; left: 500px;">Can I Get An Aggie Help?</h2>
+<h3 style="font-size: 2vw"><mark>Notifications Dashboard</mark></h3>
+</style>
+
+<!– myapp/templates/myapp/chatbot.html –>
+
+<h1>Chatbot</h1>
+
+<form method=”POST”>
+{% csrf_token %}
+<label>Enter your message:</label>
+<input type=”text” name=”user_input” />
+<button type=”submit”>Send</button>
+</form>
+
+{% if response %}
+<h2>Chatbot response:</h2>
+<p>{{ response }}</p>
+{% endif %}
+
+<marquee>
+<img src="https://i.pinimg.com/originals/92/99/40/929940c7800ad3868b0e7828d53073a7.gif" "position: absolute; top: 400px; left: 100px;" height="90" width="100"><style></marquee>
+</body>
+</html>
